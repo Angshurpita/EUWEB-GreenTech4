@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EUWEB GREEN Landing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://img.icons8.com/fluency/48/earth-planet.png">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://img.icons8.com/fluency/48/earth-planet.png" alt="Earth" />
+      EUWEB GreenTech
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#section-home">Home</a></li>
+        <li><a href="#section-projects">Projects</a></li>
+        <li><a href="#section-about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="section-home">
+      <div class="hero-content">
+        <h1>Empowering Europe's Eco Future</h1>
+        <p>EUWEB connects patents, people & innovation to solve green challenges globally.</p>
+      </div>
+    </section>
+
+    <section class="presentation-space" id="section-projects">
+      <aside class="side-menu">
+        <ul>
+          <li><a href="#solar">Solar Mesh</a></li>
+          <li><a href="#aqua">Smart Water</a></li>
+          <li><a href="#kinetic">Kinetic Walk</a></li>
+          <li><a href="#section-home">Back ↑</a></li>
+        </ul>
+      </aside>
+
+      <div class="project-display">
+        <article id="solar">
+          <img src="https://img.icons8.com/fluency/96/solar-panel.png" />
+          <h2>Solar Mesh Roofing</h2>
+          <p>Next-gen roofing panels built with integrated solar tech for EU rooftops.</p>
+          <a href="#" onclick="openModal('solar')">More »</a>
+        </article>
+
+        <article id="aqua">
+          <img src="https://img.icons8.com/fluency/96/water-element.png" />
+          <h2>Smart Eco-Water</h2>
+          <p>Clean water solutions using renewable-powered AI filtration systems.</p>
+          <a href="#" onclick="openModal('aqua')">More »</a>
+        </article>
+
+        <article id="kinetic">
+          <img src="https://img.icons8.com/fluency/96/wind-turbine.png" />
+          <h2>Kinetic Path Tiles</h2>
+          <p>Footstep-powered pavement generating electricity in public areas.</p>
+          <a href="#" onclick="openModal('kinetic')">More »</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="section-about">
+      <h2>About EUWEB</h2>
+      <p>We scale eco-patents and support EU cooperation for green-tech deployment in real-world solutions.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 EUWEB | GREEN PATENT INITIATIVE</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const body = document.getElementById('modal-body');
+
+    function openModal(type) {
+      modal.style.display = 'block';
+      let content = {
+        solar: `<h2>Solar Mesh Roofing</h2><p>Solar Mesh combines flexible solar tech with roofing panels. It’s durable, ultra-light, and integrates with European smart grids.</p>`,
+        aqua: `<h2>Smart Eco-Water</h2><p>This patent leverages AI to monitor purity, adjust filtration automatically, and report anomalies via mobile dashboard.</p>`,
+        kinetic: `<h2>Kinetic Walk</h2><p>Designed for smart cities, these tiles generate 5–7V per step and are already tested in public spaces across Northern Europe.</p>`
+      };
+      body.innerHTML = content[type] || "<p>No data.</p>";
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

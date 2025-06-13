@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5fff5;
+  color: #1b3b1b;
+}
+header {
+  background: #ffffff;
+  padding: 1em 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d6a4f;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 32px;
+  margin-right: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #2d6a4f;
+  font-weight: 500;
+}
+.hero {
+  height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #d8f3dc, #b7e4c7);
+  text-align: center;
+}
+.hero-content {
+  max-width: 700px;
+}
+.presentation-space {
+  display: flex;
+  padding: 4em 2em;
+  background: #ffffff;
+}
+.side-menu {
+  width: 200px;
+  margin-right: 2em;
+}
+.side-menu ul {
+  list-style: none;
+}
+.side-menu ul li {
+  margin: 1em 0;
+}
+.side-menu ul li a {
+  text-decoration: none;
+  color: #1b4332;
+  font-weight: 500;
+}
+.project-display {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  flex: 1;
+}
+.project-display article {
+  background: #f0fff0;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.project-display article img {
+  height: 60px;
+  margin-bottom: 0.5em;
+}
+.project-display article h2 {
+  margin-bottom: 0.3em;
+}
+.project-display article a {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: #2d6a4f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.about {
+  padding: 4em 2em;
+  text-align: center;
+  background-color: #e9f5ec;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+footer {
+  background: #d8f3dc;
+  padding: 1em;
+  text-align: center;
+  color: #444;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 2em;
+  max-width: 600px;
+  border-radius: 12px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
